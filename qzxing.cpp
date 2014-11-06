@@ -86,7 +86,7 @@ QString QZXing::decodeImage(QImage image)
     }
     catch(zxing::Exception& e)
     {
-       qDebug() << "[decodeImage()] Exception:" << e.what();
+       // qDebug() << "[decodeImage()] Exception:" << e.what();
        emit decodingFinished(false);
        return "";
     }
@@ -121,4 +121,3 @@ QString QZXing::decodeSubImageQML(const QUrl &imageUrl,
     return decodeImage(img);
 
 }
-
